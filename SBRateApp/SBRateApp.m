@@ -33,18 +33,21 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
 - (id) init{
     
     if ((self = [super init])) {
-        if (&UIApplicationWillEnterForegroundNotification)
-        {
-            
-            
-            [self incrementUseCount];
-            [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(applicationWillEnterForeground)
-                                                         name:UIApplicationWillEnterForegroundNotification
-                                                       object:nil];
+        
+        BOOL alreadyPro = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppAlreadyRatedKey];
+        BOOL neverPro = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppNeverRateKey];
+        
+        if (!alreadyPro && !neverPro) {
+            if (&UIApplicationWillEnterForegroundNotification)
+            {
+                [self incrementUseCount];
+                [[NSNotificationCenter defaultCenter] addObserver:self
+                                                         selector:@selector(applicationWillEnterForeground)
+                                                             name:UIApplicationWillEnterForegroundNotification
+                                                           object:nil];
+            }
         }
     }
-    
     return self;
 }
 
