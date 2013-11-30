@@ -3,7 +3,7 @@ SBRateApp
 
 iOS easy framework to Rate AppStore application
 
-based on **iRate** but more simple.
+based on **iRate** but simpler.
 
 USE
 =========
