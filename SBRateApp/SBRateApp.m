@@ -9,8 +9,7 @@
 #import "SBRateApp.h"
 
 #define SBRateAppUsesCountKey @"SBRateAppUsesCountKey"
-#define SBRateAppAlreadyRatedKey @"SBRateAppAlreadyRatedKey"
-#define SBRateAppNeverRateKey @"SBRateAppNeverRateKey"
+#define SBRateAppNeverShowAgainKey @"SBRateAppNeverShowAgainKey"
 
 static NSString *const SBRateiOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@";
 static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id%@";
@@ -34,10 +33,8 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
     
     if ((self = [super init])) {
         
-        BOOL alreadyPro = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppAlreadyRatedKey];
-        BOOL neverPro = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppNeverRateKey];
-        
-        if (!alreadyPro && !neverPro) {
+        BOOL neverShow = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppNeverShowAgainKey];
+        if (!neverShow) {
             if (&UIApplicationWillEnterForegroundNotification)
             {
                 [self incrementUseCount];
@@ -48,6 +45,7 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
             }
         }
     }
+    
     return self;
 }
 
@@ -101,6 +99,11 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
 
 - (void)applicationWillEnterForeground
 {
+    BOOL neverShow = [[NSUserDefaults standardUserDefaults] boolForKey:SBRateAppNeverShowAgainKey];
+    if (neverShow) {
+        return;
+    }
+    
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground)
     {
         [self incrementUseCount];
@@ -108,7 +111,6 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
         if (useCount_ >= self.usesUntilPrompt) {
             [self prompt];
         }
-        
     }
 }
 
@@ -131,13 +133,13 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
         {
             [[UIApplication sharedApplication] openURL:self.ratingURL];
         }
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppAlreadyRatedKey];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppNeverShowAgainKey];
     }else if (buttonIndex == 1){ //REMIND
         useCount_ = 0;
         [[NSUserDefaults standardUserDefaults] setInteger:useCount_ forKey:SBRateAppUsesCountKey];
         
     }else{ //NEVER
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppNeverRateKey];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppNeverShowAgainKey];
         
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
