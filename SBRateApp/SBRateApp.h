@@ -26,5 +26,6 @@
 @property (nonatomic, strong) NSString *rateButtonLabel;
 
 + (SBRateApp *)sharedInstance;
+- (void) rateNow;
 
 @end

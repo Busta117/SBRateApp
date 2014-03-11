@@ -129,11 +129,7 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) { //RATE
-        if ([[UIApplication sharedApplication] canOpenURL:self.ratingURL])
-        {
-            [[UIApplication sharedApplication] openURL:self.ratingURL];
-        }
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppNeverShowAgainKey];
+        [self rateNow];
     }else if (buttonIndex == 1){ //REMIND
         useCount_ = 0;
         [[NSUserDefaults standardUserDefaults] setInteger:useCount_ forKey:SBRateAppUsesCountKey];
@@ -143,6 +139,14 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
         
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void) rateNow{
+    if ([[UIApplication sharedApplication] canOpenURL:self.ratingURL])
+    {
+        [[UIApplication sharedApplication] openURL:self.ratingURL];
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SBRateAppNeverShowAgainKey];
 }
 
 @end
