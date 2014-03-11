@@ -22,9 +22,9 @@ pod "SBRateApp", "~> 0.1.1"
 
 ###USE
 
-- in your code import SBPickerSelector.h
+- in your code import SBRateApp.h
 ```objective-c
-#import "SBPickerSelector.h"
+#import "SBRateApp.h"
 ```
 
 - the use es too simple, you only need insert this following code in the **AppDelegate** of your app, the two first lines are necessary, the other ones are optional.
