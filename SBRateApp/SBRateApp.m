@@ -58,7 +58,7 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
 }
 
 - (NSString *) messageTitle{
-    if (_messageTitle) {
+    if (!_messageTitle) {
         _messageTitle = [NSString stringWithFormat:@"Rate %@",self.applicationName];
     }
     return _messageTitle;
