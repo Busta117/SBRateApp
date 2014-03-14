@@ -25,7 +25,8 @@
 @property (nonatomic, strong) NSString *remindButtonLabel;
 @property (nonatomic, strong) NSString *rateButtonLabel;
 
-+ (SBRateApp *)sharedInstance;
++ (SBRateApp *)sharedInstance __deprecated; //use rateApp
++ (SBRateApp *) rateApp;
 - (void) rateNow;
 
 @end

@@ -17,12 +17,22 @@ static NSString *const SBRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.
 
 @implementation SBRateApp
 
-+ (SBRateApp *)sharedInstance
+static SBRateApp *sharedInstance = nil;
+
++ (SBRateApp *)sharedInstance //deprecated, use rateApp
 {
-    static SBRateApp *sharedInstance = nil;
-    if (sharedInstance == nil)
-    {
-        sharedInstance = [[SBRateApp alloc] init];
+    @synchronized(self) {
+        if (sharedInstance == nil)
+            sharedInstance = [[SBRateApp alloc] init];
+    }
+    return sharedInstance;
+}
+
++ (SBRateApp *)rateApp
+{
+    @synchronized(self) {
+        if(sharedInstance == nil)
+            sharedInstance = [[SBRateApp alloc] init];
     }
     return sharedInstance;
 }

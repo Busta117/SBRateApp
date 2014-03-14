@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SBRateApp'
-  s.version  = '0.1.1'
+  s.version  = '0.1.2'
   s.license = { :type => 'MIT', :file => 'LICENSE'}
   s.summary  = 'iOS easy framework to rate AppStore application'
   s.homepage = 'https://github.com/Busta117/SBRateApp'

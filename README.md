@@ -13,7 +13,7 @@ based on **iRate** but simpler.
 
 ```ruby
 platform :ios, '5.0'
-pod "SBRateApp", "~> 0.1.1"
+pod "SBRateApp", "~> 0.1.2"
 ```
 
 ### Installation without CocoaPods
@@ -31,18 +31,18 @@ pod "SBRateApp", "~> 0.1.1"
   
 
 ```objective-c
-[SBRateApp sharedInstance].appStoreID = 123456; //real AppStore ID from itunes
-[SBRateApp sharedInstance].usesUntilPrompt = 5; //times until prompt the alert
+[SBRateApp rateApp].appStoreID = 123456; //real AppStore ID from itunes
+[SBRateApp rateApp].usesUntilPrompt = 5; //times until prompt the alert
 
 //you can custom all about message, these options are optional
-[SBRateApp sharedInstance].applicationName = @"My App"; //Optional
+[SBRateApp rateApp].applicationName = @"My App"; //Optional
 
-[SBRateApp sharedInstance].messageTitle = @"title custom";
-[SBRateApp sharedInstance].message = @"Custom Message";
-[SBRateApp sharedInstance].cancelButtonLabel = @"cancel custom";
-[SBRateApp sharedInstance].remindButtonLabel = @"remind later custom";
-[SBRateApp sharedInstance].rateButtonLabel = @"Rate now custom";
+[SBRateApp rateApp].messageTitle = @"title custom";
+[SBRateApp rateApp].message = @"Custom Message";
+[SBRateApp rateApp].cancelButtonLabel = @"cancel custom";
+[SBRateApp rateApp].remindButtonLabel = @"remind later custom";
+[SBRateApp rateApp].rateButtonLabel = @"Rate now custom";
 
 //you can execute this method to fire the rate action wherever you want
-[[SBRateApp sharedInstance] rateNow];
+[[SBRateApp rateApp] rateNow];
 ```

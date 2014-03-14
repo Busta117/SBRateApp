@@ -14,18 +14,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [SBRateApp sharedInstance].appStoreID = 123456; //real AppStore ID from itunes
-    [SBRateApp sharedInstance].usesUntilPrompt = 5; //times until prompt the alert
+    [SBRateApp rateApp].appStoreID = 123456; //real AppStore ID from itunes
+    [SBRateApp rateApp].usesUntilPrompt = 5; //times until prompt the alert
     
     //you can custom all about message, these options are optional
-    [SBRateApp sharedInstance].applicationName = @"My App"; //Optional
+    [SBRateApp rateApp].applicationName = @"My App"; //Optional
     
-//    [SBRateApp sharedInstance].messageTitle = [NSString  stringWithFormat:@"custom title %@",[SBRateApp sharedInstance].applicationName];
-//    [SBRateApp sharedInstance].message = @"Custom Message";
-//    [SBRateApp sharedInstance].cancelButtonLabel = @"cancel custom";
-//    [SBRateApp sharedInstance].remindButtonLabel = @"remind later custom";
-//    [SBRateApp sharedInstance].rateButtonLabel = @"Rate now custom";
+//    [SBRateApp rateApp].messageTitle = [NSString  stringWithFormat:@"custom title %@",[SBRateApp rateApp].applicationName];
+//    [SBRateApp rateApp].message = @"Custom Message";
+//    [SBRateApp rateApp].cancelButtonLabel = @"cancel custom";
+//    [SBRateApp rateApp].remindButtonLabel = @"remind later custom";
+//    [SBRateApp rateApp].rateButtonLabel = @"Rate now custom";
     
+    //you can execute this method to fire the rate action wherever you want
+//    [[SBRateApp rateApp] rateNow];
     
     return YES;
 }
