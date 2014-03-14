@@ -17,23 +17,8 @@
 		52C0A0D5184A4E9A00174DD5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C0A0D3184A4E9A00174DD5 /* Main_iPad.storyboard */; };
 		52C0A0D8184A4E9A00174DD5 /* SBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C0A0D7184A4E9A00174DD5 /* SBViewController.m */; };
 		52C0A0DA184A4E9A00174DD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C0A0D9184A4E9A00174DD5 /* Images.xcassets */; };
-		52C0A0E1184A4E9A00174DD5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0A0E0184A4E9A00174DD5 /* XCTest.framework */; };
-		52C0A0E2184A4E9A00174DD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0A0BE184A4E9A00174DD5 /* Foundation.framework */; };
-		52C0A0E3184A4E9A00174DD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0A0C2184A4E9A00174DD5 /* UIKit.framework */; };
-		52C0A0EB184A4E9A00174DD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C0A0E9184A4E9A00174DD5 /* InfoPlist.strings */; };
-		52C0A0ED184A4E9A00174DD5 /* SBRateAppExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C0A0EC184A4E9A00174DD5 /* SBRateAppExampleTests.m */; };
 		52C0A0F9184A4ED900174DD5 /* SBRateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C0A0F8184A4ED900174DD5 /* SBRateApp.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		52C0A0E4184A4E9A00174DD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52C0A0B3184A4E9A00174DD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52C0A0BA184A4E9A00174DD5;
-			remoteInfo = SBRateAppExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		52C0A0BB184A4E9A00174DD5 /* SBRateAppExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBRateAppExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,11 +36,7 @@
 		52C0A0D6184A4E9A00174DD5 /* SBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBViewController.h; sourceTree = "<group>"; };
 		52C0A0D7184A4E9A00174DD5 /* SBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBViewController.m; sourceTree = "<group>"; };
 		52C0A0D9184A4E9A00174DD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		52C0A0DF184A4E9A00174DD5 /* SBRateAppExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBRateAppExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C0A0E0184A4E9A00174DD5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		52C0A0E8184A4E9A00174DD5 /* SBRateAppExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBRateAppExampleTests-Info.plist"; sourceTree = "<group>"; };
-		52C0A0EA184A4E9A00174DD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		52C0A0EC184A4E9A00174DD5 /* SBRateAppExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBRateAppExampleTests.m; sourceTree = "<group>"; };
 		52C0A0F7184A4ED900174DD5 /* SBRateApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBRateApp.h; sourceTree = "<group>"; };
 		52C0A0F8184A4ED900174DD5 /* SBRateApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBRateApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,16 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52C0A0DC184A4E9A00174DD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52C0A0E1184A4E9A00174DD5 /* XCTest.framework in Frameworks */,
-				52C0A0E3184A4E9A00174DD5 /* UIKit.framework in Frameworks */,
-				52C0A0E2184A4E9A00174DD5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,7 +60,6 @@
 			children = (
 				52C0A0F6184A4ED900174DD5 /* SBRateApp */,
 				52C0A0C4184A4E9A00174DD5 /* SBRateAppExample */,
-				52C0A0E6184A4E9A00174DD5 /* SBRateAppExampleTests */,
 				52C0A0BD184A4E9A00174DD5 /* Frameworks */,
 				52C0A0BC184A4E9A00174DD5 /* Products */,
 			);
@@ -99,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				52C0A0BB184A4E9A00174DD5 /* SBRateAppExample.app */,
-				52C0A0DF184A4E9A00174DD5 /* SBRateAppExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,24 +102,6 @@
 				52C0A0C7184A4E9A00174DD5 /* InfoPlist.strings */,
 				52C0A0CA184A4E9A00174DD5 /* main.m */,
 				52C0A0CC184A4E9A00174DD5 /* SBRateAppExample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		52C0A0E6184A4E9A00174DD5 /* SBRateAppExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				52C0A0EC184A4E9A00174DD5 /* SBRateAppExampleTests.m */,
-				52C0A0E7184A4E9A00174DD5 /* Supporting Files */,
-			);
-			path = SBRateAppExampleTests;
-			sourceTree = "<group>";
-		};
-		52C0A0E7184A4E9A00174DD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				52C0A0E8184A4E9A00174DD5 /* SBRateAppExampleTests-Info.plist */,
-				52C0A0E9184A4E9A00174DD5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,24 +148,6 @@
 			productReference = 52C0A0BB184A4E9A00174DD5 /* SBRateAppExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52C0A0DE184A4E9A00174DD5 /* SBRateAppExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52C0A0F3184A4E9A00174DD5 /* Build configuration list for PBXNativeTarget "SBRateAppExampleTests" */;
-			buildPhases = (
-				52C0A0DB184A4E9A00174DD5 /* Sources */,
-				52C0A0DC184A4E9A00174DD5 /* Frameworks */,
-				52C0A0DD184A4E9A00174DD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52C0A0E5184A4E9A00174DD5 /* PBXTargetDependency */,
-			);
-			name = SBRateAppExampleTests;
-			productName = SBRateAppExampleTests;
-			productReference = 52C0A0DF184A4E9A00174DD5 /* SBRateAppExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,11 +157,6 @@
 				CLASSPREFIX = SB;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Busta;
-				TargetAttributes = {
-					52C0A0DE184A4E9A00174DD5 = {
-						TestTargetID = 52C0A0BA184A4E9A00174DD5;
-					};
-				};
 			};
 			buildConfigurationList = 52C0A0B6184A4E9A00174DD5 /* Build configuration list for PBXProject "SBRateAppExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -244,7 +172,6 @@
 			projectRoot = "";
 			targets = (
 				52C0A0BA184A4E9A00174DD5 /* SBRateAppExample */,
-				52C0A0DE184A4E9A00174DD5 /* SBRateAppExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,14 +185,6 @@
 				52C0A0DA184A4E9A00174DD5 /* Images.xcassets in Resources */,
 				52C0A0D2184A4E9A00174DD5 /* Main_iPhone.storyboard in Resources */,
 				52C0A0C9184A4E9A00174DD5 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52C0A0DD184A4E9A00174DD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52C0A0EB184A4E9A00174DD5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,23 +202,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52C0A0DB184A4E9A00174DD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52C0A0ED184A4E9A00174DD5 /* SBRateAppExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		52C0A0E5184A4E9A00174DD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52C0A0BA184A4E9A00174DD5 /* SBRateAppExample */;
-			targetProxy = 52C0A0E4184A4E9A00174DD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52C0A0C7184A4E9A00174DD5 /* InfoPlist.strings */ = {
@@ -324,14 +227,6 @@
 				52C0A0D4184A4E9A00174DD5 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		52C0A0E9184A4E9A00174DD5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52C0A0EA184A4E9A00174DD5 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -437,48 +332,6 @@
 			};
 			name = Release;
 		};
-		52C0A0F4184A4E9A00174DD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBRateAppExample.app/SBRateAppExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SBRateAppExample/SBRateAppExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SBRateAppExampleTests/SBRateAppExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		52C0A0F5184A4E9A00174DD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBRateAppExample.app/SBRateAppExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SBRateAppExample/SBRateAppExample-Prefix.pch";
-				INFOPLIST_FILE = "SBRateAppExampleTests/SBRateAppExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,14 +351,7 @@
 				52C0A0F2184A4E9A00174DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		52C0A0F3184A4E9A00174DD5 /* Build configuration list for PBXNativeTarget "SBRateAppExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52C0A0F4184A4E9A00174DD5 /* Debug */,
-				52C0A0F5184A4E9A00174DD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
